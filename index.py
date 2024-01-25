@@ -17,7 +17,7 @@ def read_root():
 def read_item(send_message: str, send_resum: str):
 
     response= openai.Embedding.create(
-      engine="text-similarity-davinci-001",
+      engine="text-embedding-ada-002",
       input=[send_message, send_resum])
     embedding_text=response['data'][0]['embedding']
     embedding_answer=response['data'][1]['embedding']
